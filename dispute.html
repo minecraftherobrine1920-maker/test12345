@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raise Dispute — TrafficFine.in</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="brand">🚦 <span>TrafficFine</span>.in</div>
+    <a href="index.html">Home</a>
+    <a href="status.html">Track Status</a>
+  </nav>
+
+  <!-- ===== CONTENT ===== -->
+  <div class="page-wrapper">
+
+    <!-- Alert area (success / error) -->
+    <div id="formAlert"></div>
+
+    <div class="form-card">
+      <h2>⚖️ Raise a Dispute</h2>
+      <p class="subtitle">Fill in the form below to contest this fine. Our team will review your case within 5–7 business days.</p>
+
+      <form id="disputeForm" enctype="multipart/form-data">
+
+        <!-- Hidden fields -->
+        <input type="hidden" id="disputeFineId"  name="fine_id" value="">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="disputeVehicle">Vehicle Number *</label>
+            <input
+              type="text"
+              id="disputeVehicle"
+              name="vehicle_number"
+              placeholder="e.g. MH12AB1234"
+              maxlength="15"
+              required
+              style="text-transform:uppercase;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:0.1em"
+            >
+          </div>
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="reason">Reason for Dispute *</label>
+          <textarea
+            id="reason"
+            name="reason"
+            placeholder="Describe in detail why you believe this fine was issued incorrectly. Include any relevant facts, dates, or circumstances…"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="proof">Upload Supporting Document (Optional)</label>
+          <input type="file" id="proof" name="proof" accept="image/*,.pdf">
+          <p class="text-muted mt-1" style="font-size:0.8rem;">Accepted: JPG, PNG, PDF (max 5 MB)</p>
+        </div>
+
+        <hr class="divider">
+
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center">
+          <button type="submit" class="btn btn-primary" style="font-size:1rem; padding:0.9rem 2rem;">
+            Submit Dispute
+          </button>
+          <a href="index.html" class="btn btn-outline">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Info notice -->
+    <div class="alert alert-info mt-3" style="max-width:640px; margin:1.5rem auto 0;">
+      ℹ️ After submitting, you can track your dispute status on the <a href="status.html">Status Tracking</a> page.
+    </div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2024 TrafficFine.in &nbsp;·&nbsp; Demo Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

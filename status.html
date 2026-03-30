@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dispute Status — TrafficFine.in</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="brand">🚦 <span>TrafficFine</span>.in</div>
+    <a href="index.html">Home</a>
+    <a href="status.html" class="active">Track Status</a>
+  </nav>
+
+  <!-- ===== CONTENT ===== -->
+  <div class="page-wrapper">
+
+    <div class="page-title">
+      <h1>📋 Dispute Status Tracker</h1>
+      <a href="index.html" class="btn btn-outline">← Back to Search</a>
+    </div>
+
+    <!-- Stats Summary Cards -->
+    <div class="stats-row">
+      <div class="stat-card total">
+        <div class="num" id="statTotal">—</div>
+        <div class="label">Total Disputes</div>
+      </div>
+      <div class="stat-card pending">
+        <div class="num" id="statPending">—</div>
+        <div class="label">Pending</div>
+      </div>
+      <div class="stat-card approved">
+        <div class="num" id="statApproved">—</div>
+        <div class="label">Approved</div>
+      </div>
+      <div class="stat-card rejected">
+        <div class="num" id="statRejected">—</div>
+        <div class="label">Rejected</div>
+      </div>
+    </div>
+
+    <!-- Status Legend -->
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem; font-size:0.82rem;">
+      <span class="badge badge-pending">Pending — Under Review</span>
+      <span class="badge badge-approved">Approved — Fine Waived</span>
+      <span class="badge badge-rejected">Rejected — Fine Stands</span>
+    </div>
+
+    <!-- Table area (populated by JS) -->
+    <div id="disputeTableWrap">
+      <div class="spinner-wrap">
+        <div class="spinner"></div>
+        <span>Loading disputes…</span>
+      </div>
+    </div>
+
+    <!-- Refresh tip -->
+    <p class="text-muted mt-2" style="font-size:0.8rem; text-align:right;">
+      <a href="status.html" style="color:var(--muted)">🔄 Refresh</a>
+    </p>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2024 TrafficFine.in &nbsp;·&nbsp; Demo Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

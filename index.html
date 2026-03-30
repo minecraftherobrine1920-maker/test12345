@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrafficFine.in — Smart Fine Verification</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="brand">🚦 <span>TrafficFine</span>.in</div>
+    <a href="index.html" class="active">Home</a>
+    <a href="status.html">Track Status</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <div class="page-wrapper">
+    <div class="hero">
+      <div class="badge">🇮🇳 Official Traffic Fine Portal</div>
+      <h1>Verify Your<br><em>Traffic Fine</em> Online</h1>
+      <p>Enter your vehicle number to instantly check pending fines, view evidence, and raise a dispute if needed.</p>
+
+      <!-- Search Form -->
+      <form id="searchForm">
+        <div class="search-box">
+          <input
+            type="text"
+            id="vehicleInput"
+            placeholder="e.g. MH12AB1234"
+            maxlength="15"
+            autocomplete="off"
+            spellcheck="false"
+            required
+          >
+          <button type="submit" class="btn btn-primary">🔍 Search</button>
+        </div>
+      </form>
+
+      <!-- Alert area -->
+      <div id="alertBox" style="max-width:520px;margin:1rem auto 0;"></div>
+
+      <!-- Sample vehicles hint -->
+      <p class="text-muted mt-2" style="font-size:0.82rem;">
+        Try: <a href="fine.html?vehicle=MH12AB1234" style="color:var(--accent)">MH12AB1234</a> &nbsp;|&nbsp;
+             <a href="fine.html?vehicle=DL5CAB5678" style="color:var(--accent)">DL5CAB5678</a> &nbsp;|&nbsp;
+             <a href="fine.html?vehicle=KA01MF9900" style="color:var(--accent)">KA01MF9900</a>
+      </p>
+    </div>
+
+    <!-- Info cards -->
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="icon">🔍</div>
+        <h3>Instant Lookup</h3>
+        <p>Search fine details by vehicle number in seconds.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">📷</div>
+        <h3>View Evidence</h3>
+        <p>See the captured images of traffic violations.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">⚖️</div>
+        <h3>Raise Dispute</h3>
+        <p>Believe it's an error? Submit a dispute online.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">📋</div>
+        <h3>Track Status</h3>
+        <p>Monitor the progress of your dispute in real time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2024 TrafficFine.in &nbsp;·&nbsp; A Smart India Hackathon Project &nbsp;·&nbsp; For demo purposes only</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

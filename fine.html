@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fine Details — TrafficFine.in</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="brand">🚦 <span>TrafficFine</span>.in</div>
+    <a href="index.html">Home</a>
+    <a href="status.html">Track Status</a>
+  </nav>
+
+  <!-- ===== CONTENT ===== -->
+  <div class="page-wrapper">
+
+    <div class="page-header">
+      <h1>Fine Details</h1>
+      <p>Showing results for vehicle: <strong id="vehicleLabel" class="text-accent">—</strong></p>
+    </div>
+
+    <!-- Dynamic result area (spinner → card or error) -->
+    <div id="resultBox">
+      <div class="spinner-wrap">
+        <div class="spinner"></div>
+        <span>Fetching fine details…</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img src="" alt="Evidence enlarged">
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2024 TrafficFine.in &nbsp;·&nbsp; Demo Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
